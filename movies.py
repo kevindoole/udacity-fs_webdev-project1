@@ -1,6 +1,7 @@
 """Displays a page that shows my most favouritest movies"""
 
 import fresh_tomatoes
+import re
 
 class Movie(object):
     """Contains information needed to present a movie"""
@@ -9,6 +10,12 @@ class Movie(object):
         self.title = title
         self.poster_image_url = poster_image_url
         self.trailer_youtube_url = trailer_youtube_url
+
+    def youtube_id(self):
+        youtube_id_match = re.search(r'(?<=v=)[^&#]+', self.trailer_youtube_url)
+        youtube_id_match = youtube_id_match or re.search(r'(?<=be/)[^&#]+', self.trailer_youtube_url)
+        trailer_youtube_id = youtube_id_match.group(0) if youtube_id_match else None
+        return trailer_youtube_id
 
 movies = [
     Movie(
