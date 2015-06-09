@@ -3,6 +3,8 @@ import os
 
 # Styles and scripting for the page
 main_page_head = '''
+<!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="utf-8">
     <title>Fresh Tomatoes!</title>
@@ -65,15 +67,13 @@ main_page_head = '''
 
 # The main page layout and title bar
 main_page_content = '''
-<!DOCTYPE html>
-<html lang="en">
   <body>
     <!-- Trailer Video Modal -->
     <div class="modal" id="trailer">
       <div class="modal-dialog">
         <div class="modal-content">
           <a href="#" class="hanging-close" data-dismiss="modal" aria-hidden="true">
-            <img src="https://lh5.ggpht.com/v4-628SilF0HtHuHdu5EzxD7WRqOrrTIDi_MhEG6_qkNtUK5Wg7KPkofp_VJoF7RS2LhxwEFCO1ICHZlc-o_=s0#w=24&h=24"/>
+            <img alt="close" src="https://lh5.ggpht.com/v4-628SilF0HtHuHdu5EzxD7WRqOrrTIDi_MhEG6_qkNtUK5Wg7KPkofp_VJoF7RS2LhxwEFCO1ICHZlc-o_=s0#w=24&amp;h=24"/>
           </a>
           <div class="scale-media" id="trailer-video-container">
           </div>
@@ -102,7 +102,7 @@ main_page_content = '''
 # A single movie entry html template
 movie_tile_content = '''
 <div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="{trailer_youtube_id}" data-toggle="modal" data-target="#trailer">
-    <img srcset="{srcset}" src="{poster_image_url}" width="220" height="342">
+    <img alt="{movie_title} poster" srcset="{srcset}" src="{poster_image_url}" width="220" height="342">
     <h2>{movie_title}</h2>
     <p class="more-info"></p>
 </div>
