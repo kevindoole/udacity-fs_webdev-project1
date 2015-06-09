@@ -26,14 +26,15 @@ $(document).ready(function () {
 
   // Loads additional movie information from the OMDB API
   $('.movie-tile').each(function(index) {
-    var $t = $(this);
-    var title = $t.find('h2').text();
+    var $t = $(this),
+      title = $t.find('h2').text();
     title = title.replace(' ', '+');
+
     $.getJSON('http://www.omdbapi.com/?t=' + title + '&y=&plot=short&r=json&tomatoes=true', function(data) {
       var moreInfo = data.Plot + '<br />' +
         'IMDB Rating: ' + data.imdbRating + '<br />Rotten tomatoes: ' + data.tomatoRating + '</p>';
       $t.find('.more-info').addClass('loaded').append(moreInfo);
     });
-    $(this).append();
   });
+
 });
