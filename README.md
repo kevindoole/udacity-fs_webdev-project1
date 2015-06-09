@@ -2,7 +2,7 @@
 Have you ever wished you could see a list of three movies? Well now's your chance!
 
 ## Installation
-1. Download the zip archive
+1. [Download](https://github.com/kevindoole/udacity-fs_webdev-project1/archive/master.zip) the zip archive
 2. Unzip the zip archive wherever you like
 3. If you do not have Python on your system, [download it](https://www.python.org/downloads/).
 4. Once you've got Python ready to go, run `python movies.py` in a terminal or open the file using IDLE (included with the Python download).
