@@ -71,35 +71,34 @@ main_page_head = '''
 
 # The main page layout and title bar
 main_page_content = '''
-  <body>
-    <!-- Trailer Video Modal -->
-    <div class="modal" id="trailer">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <a href="#" class="hanging-close" data-dismiss="modal" aria-hidden="true">
-            <img alt="close" src="https://lh5.ggpht.com/v4-628SilF0HtHuHdu5EzxD7WRqOrrTIDi_MhEG6_qkNtUK5Wg7KPkofp_VJoF7RS2LhxwEFCO1ICHZlc-o_=s0#w=24&amp;h=24"/>
-          </a>
-          <div class="scale-media" id="trailer-video-container">
-          </div>
+    <body>
+        <!-- Trailer Video Modal -->
+        <div class="modal" id="trailer">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <a href="#" class="hanging-close" data-dismiss="modal" aria-hidden="true">
+                        <img alt="close" src="https://lh5.ggpht.com/v4-628SilF0HtHuHdu5EzxD7WRqOrrTIDi_MhEG6_qkNtUK5Wg7KPkofp_VJoF7RS2LhxwEFCO1ICHZlc-o_=s0#w=24&amp;h=24"/>
+                    </a>
+                    <div class="scale-media" id="trailer-video-container"></div>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
     
-    <!-- Main Page Content -->
-    <div class="container">
-      <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <!-- Main Page Content -->
         <div class="container">
-          <div class="navbar-header">
-            <a class="navbar-brand" href="#">Fresh Tomatoes Movie Trailers</a>
-          </div>
+            <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+                <div class="container">
+                    <div class="navbar-header">
+                        <a class="navbar-brand" href="#">Fresh Tomatoes Movie Trailers</a>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-    <div class="container">
-      {movie_tiles}
-    </div>
-    <script type="text/javascript" charset="utf-8" src="resources/js.js"></script>
-  </body>
+        <div class="container">
+            {movie_tiles}
+        </div>
+        <script type="text/javascript" charset="utf-8" src="resources/js.js"></script>
+    </body>
 </html>
 '''
 
