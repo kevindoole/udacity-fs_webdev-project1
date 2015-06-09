@@ -41,12 +41,16 @@ main_page_head = '''
             background-color: #EEE;
             cursor: pointer;
         }
+        .movie-tile h2 {
+          text-align: left;
+        }
         .more-info {
           background: transparent url(./resources/loader.gif) no-repeat center;
           min-height: 50px;
+          text-align: left;
         }
         .more-info.loaded {
-        background: none;
+          background: none;
         }
         .scale-media {
             padding-bottom: 56.25%;
@@ -104,7 +108,7 @@ movie_tile_content = '''
 <div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="{trailer_youtube_id}" data-toggle="modal" data-target="#trailer">
     <img alt="{movie_title} poster" srcset="{srcset}" src="{poster_image_url}" width="220" height="342">
     <h2>{movie_title}</h2>
-    <p class="more-info"></p>
+    <div class="more-info"></div>
 </div>
 '''
 
