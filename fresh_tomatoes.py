@@ -39,6 +39,13 @@ main_page_head = '''
             background-color: #EEE;
             cursor: pointer;
         }
+        .more-info {
+          background: transparent url(./resources/loader.gif) no-repeat center;
+          min-height: 50px;
+        }
+        .more-info.loaded {
+        background: none;
+        }
         .scale-media {
             padding-bottom: 56.25%;
             position: relative;
@@ -97,6 +104,7 @@ movie_tile_content = '''
 <div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="{trailer_youtube_id}" data-toggle="modal" data-target="#trailer">
     <img src="{poster_image_url}" width="220" height="342">
     <h2>{movie_title}</h2>
+    <p class="more-info"></p>
 </div>
 '''
 

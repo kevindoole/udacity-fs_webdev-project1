@@ -22,4 +22,16 @@ $(document).ready(function () {
   $('.movie-tile').hide().first().show("fast", function showNext() {
     $(this).next("div").show("fast", showNext);
   });
+
+  $('.movie-tile').each(function(index) {
+    var $t = $(this);
+    var title = $t.find('h2').text();
+    title = title.replace(' ', '+');
+    $.getJSON('http://www.omdbapi.com/?t=' + title + '&y=&plot=short&r=json&tomatoes=true', function(data) {
+      var moreInfo = data.Plot + '<br />' +
+        'IMDB Rating: ' + data.imdbRating + '<br />Rotten tomatoes: ' + data.tomatoRating + '</p>';
+      $t.find('.more-info').addClass('loaded').append(moreInfo);
+    });
+    $(this).append();
+  });
 });
