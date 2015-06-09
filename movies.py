@@ -12,6 +12,7 @@ class Movie(object):
         self.trailer_youtube_url = trailer_youtube_url
 
     def youtube_id(self):
+        """Pulls the YouTube ID out of a YouTube URL"""
         youtube_id_match = re.search(r'(?<=v=)[^&#]+', self.trailer_youtube_url)
         youtube_id_match = youtube_id_match or re.search(r'(?<=be/)[^&#]+', self.trailer_youtube_url)
         trailer_youtube_id = youtube_id_match.group(0) if youtube_id_match else None
