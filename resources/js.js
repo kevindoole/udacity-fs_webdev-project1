@@ -31,8 +31,11 @@ $(document).ready(function () {
     title = title.replace(' ', '+');
 
     $.getJSON('http://www.omdbapi.com/?t=' + title + '&y=&plot=short&r=json&tomatoes=true', function(data) {
-      var moreInfo = data.Plot + '<br />' +
-        'IMDB Rating: ' + data.imdbRating + '<br />Rotten tomatoes: ' + data.tomatoRating + '</p>';
+      var moreInfo = 
+        '<p><i>' + data.Year + ', '  + data.Runtime + ', Rated ' + data.Rated + '</i></p>' + 
+        '<p>' + data.Plot + '</p>' +
+        '<p>Starring ' + data.Actors + '</p><hr />' +
+        '<p>IMDB Rating: ' + data.imdbRating + '<br />Rotten tomatoes: ' + data.tomatoRating + '</p>';
       $t.find('.more-info').addClass('loaded').append(moreInfo);
     });
   });
