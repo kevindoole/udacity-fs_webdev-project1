@@ -20,7 +20,7 @@ class Movie(object):
 
 movies = [
     Movie(
-        'The Life of Brian',
+        'Life of Brian',
         'http://ayay.co.uk/movies/poster/comedy/life-of-brian-re-release-2004.jpg',
         'https://www.youtube.com/watch?v=tOOVm4kY4lE'
     ),
