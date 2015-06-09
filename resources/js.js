@@ -17,12 +17,14 @@ $(document).on('click', '.movie-tile', function (event) {
     }));
 });
 
-// Animate in the movies when the page loads
+
 $(document).ready(function () {
+  // Animate in the movies when the page loads
   $('.movie-tile').hide().first().show("fast", function showNext() {
     $(this).next("div").show("fast", showNext);
   });
 
+  // Loads additional movie information from the OMDB API
   $('.movie-tile').each(function(index) {
     var $t = $(this);
     var title = $t.find('h2').text();
